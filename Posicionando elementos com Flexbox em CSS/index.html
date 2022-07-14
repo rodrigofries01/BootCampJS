@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - Display flex</title>
+  <!--================Diaplayflex================-->
+  <style>
+    .flex{
+      max-width: 160px;
+      padding: 10px;
+      border: 2px solid black;
+      display: flex;
+    }
+
+    .item{
+      background-color: aqua;
+      margin: 5px;
+    }
+
+  /*================flexDirection================*/
+
+    .flex-container{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+    }
+
+    .flex-item{
+      background: blue;
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .row{
+      flex-direction: row;
+    }
+
+    .row-reverse{
+      flex-direction: row-reverse;
+    }
+
+    .row-reverse li{
+      background-color: red;
+    }
+
+    .collumn{
+      float: left;
+      flex-direction: column;
+    }
+
+    .collumn li{
+      background: orange;
+    }
+
+    .collumn-reverse{
+      float: right;
+      flex-direction: column-reverse;
+    }
+
+    .collumn-reverse li{
+      background: purple;
+    }
+
+    /*-================flexwrap================*/
+
+    .flex-container2{
+      display: flex;
+      height: 150px;
+      border: 2px solid black;
+      max-width: 300px;
+      flex-direction: row;
+    }
+
+    .flex-item2{
+      font-size: 24px;
+      height: 50%;
+      text-align: center;
+      line-height: 50px;
+      min-width: 100px;
+    }
+
+    .nowrap{
+      flex-wrap: nowrap;
+    }
+
+    .blue{
+      background-color: blue;
+    }
+
+    .green{
+      background-color: green;
+    }
+
+    .yellow{
+      background-color: yellow;
+    }
+
+    .wrap{
+      flex-wrap: wrap;
+    }
+
+    .wrap-reverse{
+      flex-wrap: wrap-reverse;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div style="display: flow-root;">
+    <div class="flex">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div><!--flex-->
+
+    <!--================flexDirection================-->
+
+    <ul class="flex-container row">
+      <li class="flex-item">1</li>
+      <li class="flex-item">2</li>
+      <li class="flex-item">3</li>
+      <li class="flex-item">4</li>
+      <li class="flex-item">5</li>
+    </ul><!--flexcontainer-->
+
+    <ul class="flex-container row-reverse">
+      <li class="flex-item">1</li>
+      <li class="flex-item">2</li>
+      <li class="flex-item">3</li>
+      <li class="flex-item">4</li>
+      <li class="flex-item">5</li>
+    </ul><!--flexcontainer-->
+
+    <ul class="flex-container collumn">
+      <li class="flex-item">1</li>
+      <li class="flex-item">2</li>
+      <li class="flex-item">3</li>
+      <li class="flex-item">4</li>
+      <li class="flex-item">5</li>
+    </ul><!--flexcontainer-->
+
+    <ul class="flex-container collumn-reverse">
+      <li class="flex-item">1</li>
+      <li class="flex-item">2</li>
+      <li class="flex-item">3</li>
+      <li class="flex-item">4</li>
+      <li class="flex-item">5</li>
+    </ul><!--flexcontainer-->
+  </div>
+    <!--================flexwrap================-->
+
+  <h1>no wrap</h1>
+
+  <div class="flex-container2 nowrap">
+    <div class="flex-item2 yellow">1</div>
+    <div class="flex-item2 green">2</div>
+    <div class="flex-item2 blue">3</div>
+    <div class="flex-item2 green">4</div>
+  </div><!--flexcontainer2-->
+  
+  <h1>wrap</h1>
+
+  <div class="flex-container2 wrap">
+    <div class="flex-item2 yellow">1</div>
+    <div class="flex-item2 green">2</div>
+    <div class="flex-item2 blue">3</div>
+    <div class="flex-item2 green">4</div>
+  </div><!--flexcontainer2-->
+  
+  <h1>wrap Reverse</h1>
+
+  <div class="flex-container2 wrap-reverse">
+    <div class="flex-item2 yellow">1</div>
+    <div class="flex-item2 green">2</div>
+    <div class="flex-item2 blue">3</div>
+    <div class="flex-item2 green">4</div>
+  </div><!--flexcontainer2-->
+</body>
+</html>
