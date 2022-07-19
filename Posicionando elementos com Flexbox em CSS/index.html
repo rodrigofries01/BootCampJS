@@ -8,7 +8,7 @@
   <!--================Diaplayflex================-->
   <style>
     .flex{
-      max-width: 160px;
+      max-width: 170px;
       padding: 10px;
       border: 2px solid black;
       display: flex;
@@ -16,6 +16,7 @@
 
     .item{
       background-color: aqua;
+      font-weight: bold;
       margin: 5px;
     }
 
@@ -111,6 +112,178 @@
       flex-wrap: wrap-reverse;
     }
 
+    /*===================flexflow=====================*/
+
+    .flex-container3{
+      display: flex;
+      border: 2px solid black;
+      margin-top: 40px;
+      max-width: 500px;
+    }
+    
+    .default{
+      flex-flow: row nowrap;
+    }
+    
+    .wrap-reverse1{
+      flex-flow: row wrap-reverse;
+    }
+
+    .wrap-reverse1 div{
+      background-color: aqua;
+      color: black;
+    }
+    
+
+    .wrap1{
+      flex-flow: row wrap;
+    }
+    
+    .wrap1 div{
+      background-color: brown;
+    }
+    
+    .r-nowrap{
+      flex-flow: row-reverse nowrap;
+    }
+    
+    .r-nowrap div{
+      background-color: chartreuse;
+      color: black;
+    }
+
+    .r-wrap{
+      flex-flow: row-reverse wrap;
+    }
+
+    .r-wrap div{
+      background-color: cornflowerblue;
+    }
+
+    .rr-wrap{
+      flex-flow: row-reverse wrap-reverse;
+    }
+
+    .rr-wrap div{
+      background-color: darkred;
+    }
+
+    .flex-item3{
+      background-color: teal;
+      margin: 5px;
+      color: white;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    /*===================justifyContent=====================*/
+              
+    /* ==================ROW================== */
+    .content-container {
+      max-width: 400px;
+      border: 2px solid black;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+    }
+
+    .content-item{
+      background-color: lawngreen;
+      margin: 5px;
+      text-align: center;
+      color: white;
+    }
+
+    .flex-start{
+      justify-content: flex-start;
+    }
+
+    .flex-end{
+      justify-content: flex-end;
+    }
+
+    .flex-end div{
+      background: rgb(27, 216, 100);
+      color: black;
+    }
+
+    .center{
+      justify-content: center;
+    }
+
+    .center div{
+      background-color: blueviolet;
+      color: white;
+    }
+
+    .space-beetwen{
+      justify-content: space-between;
+    }
+    
+    .space-beetwen div{
+      background-color: crimson;
+      color: white;
+    }
+
+    .space-around{
+      justify-content: space-around;
+    }
+
+    .space-around div{
+      background-color: darkorange;
+    }
+
+     /* ==================COLLUMN================== */
+
+  .collumn{
+    flex-direction: column;
+    height: 200px;
+    margin: 3px;
+  }
+
+    .flex-start{
+      justify-content: flex-start;
+    }
+
+    .flex-end{
+      justify-content: flex-end;
+    }
+
+    .flex-end div{
+      background: rgb(27, 216, 100);
+      color: black;
+    }
+
+    .center{
+      justify-content: center;
+    }
+
+    .center div{
+      background-color: blueviolet;
+      color: white;
+    }
+
+    .space-beetwen{
+      justify-content: space-between;
+    }
+    
+    .space-beetwen div{
+      background-color: crimson;
+      color: white;
+    }
+
+    .space-around{
+      justify-content: space-around;
+    }
+
+    .space-around div{
+      background-color: darkorange;
+    }
+
+/*=================align itens=====================*/
+
   </style>
 </head>
 
@@ -156,8 +329,10 @@
       <li class="flex-item">5</li>
     </ul><!--flexcontainer-->
   </div>
-    <!--================flexwrap================-->
 
+  <!--================flexwrap================-->
+
+<div style="display: flow-root;">
   <h1>no wrap</h1>
 
   <div class="flex-container2 nowrap">
@@ -184,5 +359,168 @@
     <div class="flex-item2 blue">3</div>
     <div class="flex-item2 green">4</div>
   </div><!--flexcontainer2-->
+</div>
+  
+<!--===================flexflow=====================-->
+
+<!-- <div style="display: flow-root;"> -->
+  <h1>default: rowWrap</h1> 
+    <div class="flex-container3 default">
+      <div class="flex-item3">1</div>
+      <div class="flex-item3">2</div>
+      <div class="flex-item3">3</div>
+      <div class="flex-item3">4</div>
+      <div class="flex-item3">5</div>
+    </div><!--flexcontainer3-->
+
+    <h1>Wrap</h1> 
+      <div class="flex-container3 wrap1">
+        <div class="flex-item3">1</div>
+        <div class="flex-item3">2</div>
+        <div class="flex-item3">3</div>
+        <div class="flex-item3">4</div>
+        <div class="flex-item3">5</div>
+        <div class="flex-item3">6</div>
+      </div><!--flexcontainer3-->
+ 
+      <h1>Wrap-Reverse</h1> 
+      <div class="flex-container3 wrap-reverse1">
+        <div class="flex-item3">1</div>
+        <div class="flex-item3">2</div>
+        <div class="flex-item3">3</div>
+        <div class="flex-item3">4</div>
+        <div class="flex-item3">5</div>
+        <div class="flex-item3">6</div>
+      </div><!--flexcontainer3-->
+    
+    <h1>row-reverse nowWrap</h1> 
+    <div class="flex-container3 r-nowrap">
+      <div class="flex-item3">1</div>
+      <div class="flex-item3">2</div>
+      <div class="flex-item3">3</div>
+      <div class="flex-item3">4</div>
+      <div class="flex-item3">5</div>
+      <div class="flex-item3">6</div>
+      <div class="flex-item3">7</div>
+    </div><!--flexcontainer3-->
+    
+    <h1>row-reverse Wrap</h1> 
+    <div class="flex-container3 r-wrap">
+      <div class="flex-item3">1</div>
+      <div class="flex-item3">2</div>
+      <div class="flex-item3">3</div>
+      <div class="flex-item3">4</div>
+      <div class="flex-item3">5</div>
+      <div class="flex-item3">6</div>
+      <div class="flex-item3">7</div>
+    </div><!--flexcontainer3-->
+    
+    <h1>row-reverse Wrap-reverse</h1> 
+    <div class="flex-container3 rr-wrap">
+      <div class="flex-item3">1</div>
+      <div class="flex-item3">2</div>
+      <div class="flex-item3">3</div>
+      <div class="flex-item3">4</div>
+      <div class="flex-item3">5</div>
+      <div class="flex-item3">6</div>
+      <div class="flex-item3">7</div>
+    </div><!--flexcontainer3-->
+</div><!--flow-root-->
+
+<!--===================justifyContent===================== -->
+
+<div style="display: flow-root;">
+<h1>row</h1>
+<p>Flex-Start</p>
+   <section class="content-container flex-start">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <p>Flex-end</p>
+   <section class="content-container flex-end">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <p>center</p>
+   <section class="content-container center">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+    
+   <p>space-beetwen</p>
+   <section class="content-container space-beetwen">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <p>space-around</p>
+   <section class="content-container space-around">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <!--=================COLLUMN=====================-->
+
+   <h1>collumn</h1>
+
+   <p>Flex-Start</p>
+   <section class="content-container flex-start collumn">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <p>Flex-end</p>
+   <section class="content-container flex-end collumn">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <p>center</p>
+   <section class="content-container center collumn">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+    
+   <p>space-beetwen</p>
+   <section class="content-container space-beetwen collumn">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+
+   <p>space-around</p>
+   <section class="content-container space-around collumn">
+      <div class="item">1</div>
+      <div class="item">item 2</div>
+      <div class="item">item 3</div>
+      <div class="item">outro item</div>
+   </section><!--contentContainer-->
+</div><!--flow-root-->
+
+<!--=================align itens=====================-->
+
+<div style="display: flow-root;">
+
+</div><!--flow-root-->
+
 </body>
 </html>
